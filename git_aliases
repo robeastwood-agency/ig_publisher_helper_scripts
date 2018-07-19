@@ -1,0 +1,55 @@
+# git aliases
+
+# print status, branches and stashes
+alias gs='clear && echo GIT STATUS: && git status && echo && echo BRANCHES: && git branch -vv && echo && echo STASHES: && git stash list && echo '
+
+# adding
+alias ga='git add '
+
+# diffing
+alias gd='git diff'
+alias gdws='git diff --ignore-all-space'   # Ignore whitespace when comparing lines
+alias gdc='git diff --cached'
+
+# committing
+alias gc='git commit && git status'
+alias gac='git commit -a'
+alias gcd='git commit -v'  # gives diff in the commit comment
+alias gca='git commit --amend'
+
+# branches
+alias gb='git branch '
+
+# checkouts
+alias gco='git checkout '
+alias gcom='git checkout master'
+alias gcop='git checkout -' # check out the previously used branch
+
+# log output
+alias gh="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gdl='git log -1 HEAD && echo && git diff HEAD^ HEAD' # show details of last commit
+
+# tagging
+alias gt='git tag -a -m '
+alias gpto='git push --tags origin'
+
+# pushing
+alias gp='git push'
+
+# pulling
+alias gpl='git pull'
+alias gpum='git pull upstream master'
+
+# rebase
+alias gr='git rebase'
+alias gri='git rebase --interactive'
+
+# fixing stuff
+# unstages a file; 'gus' alone unstages all staged files, or can just do one file 'gus test.txt'
+alias gus='git reset HEAD '
+# to discard changes in working directory
+# use with a file to drop all working directory changes in that file. All changes are irretrievably lost.
+alias gdw='git checkout -- '
+
+# others
+alias ggc='git gc'  # garbage collection https://git-scm.com/docs/git-gc

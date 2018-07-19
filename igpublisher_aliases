@@ -1,0 +1,18 @@
+# FHIR IG publisher aliases
+
+# standard run
+alias pub='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig.json'
+
+# standard run using a newly downloaded jar file
+alias pubn='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher-new.jar" -ig ig.json'
+
+# standard run with watch option
+alias pubw='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig.json -watch'
+
+# run with no terminology server
+alias pubt='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig.json -tx n/a'
+
+# various helper scripts
+alias pc='/c/work/scripts/publisher_clean.sh'
+alias rb='/c/work/scripts/invoke_repo_build.sh'
+alias spo='/c/work/scripts/save_last_publisher_output.sh'
