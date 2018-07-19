@@ -15,14 +15,14 @@ declare -a folder_array=("output" "txCache" "temp" "qa")
 # loop through the above array
 for folder in "${folder_array[@]}"
 do
-   if [ -d "$folder" ]; then								# does the folder exist?
-     if [ -z "$(ls -A "$folder")" ]; then					# when it exists, is it empty?
+   if [ -d "$folder" ]; then					# does the folder exist?
+     if [ -z "$(ls -A "$folder")" ]; then			# when it exists, is it empty?
        echo "The folder '"$folder"' is already empty"		# print that it is empty
-     else													# not empty
+     else							# not empty
        echo "Removing contents of '"$folder"' folder"		# print that it is NOT empty
-	   rm -rf "$folder"/*									# and remove its contents
+	   rm -rf "$folder"/*					# and remove its contents
      fi
-   else														# when the folder doesn't exist
-      echo "Folder '"$folder"' does not exist"				# print that the folder doesn't exist & do nothing
+   else								# when the folder doesn't exist
+      echo "Folder '"$folder"' does not exist"			# print that the folder doesn't exist & do nothing
    fi
 done
