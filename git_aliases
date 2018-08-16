@@ -56,5 +56,5 @@ alias gdw='git checkout -- '
 alias ggc='git gc'  # garbage collection https://git-scm.com/docs/git-gc
 
 # plumbing commands
-alias gcft='git cat-file -t '  # gets the hash object's type (returns tree blob or commit)
-alias gcfp='git cat-file -p '  # pretty proints the content of the hash object (tree blob or commit)
+alias gcft='git cat-file -t '  # gets the hash object's type (returns tree, blob or commit)
+alias gcfp='git cat-file -p '  # pretty prints the content of the hash object (tree, blob or commit)
