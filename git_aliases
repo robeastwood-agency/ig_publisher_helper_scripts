@@ -10,6 +10,7 @@ alias ga='git add '
 alias gd='git diff'
 alias gdws='git diff --ignore-all-space'   # Ignore whitespace when comparing lines
 alias gdc='git diff --cached'
+alias gdl='clear && echo LAST COMMIT && echo && git log -1 HEAD && echo && git diff HEAD^ HEAD'  # the diff og the last commit
 
 # committing
 alias gc='git commit && git status'
@@ -53,3 +54,7 @@ alias gdw='git checkout -- '
 
 # others
 alias ggc='git gc'  # garbage collection https://git-scm.com/docs/git-gc
+
+# plumbing commands
+alias gcft='git cat-file -t '  # gets the hash object's type (returns tree blob or commit)
+alias gcfp='git cat-file -p '  # pretty proints the content of the hash object (tree blob or commit)
