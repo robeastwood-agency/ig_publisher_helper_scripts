@@ -16,3 +16,17 @@ alias pubt='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.ja
 alias pc='/c/work/scripts/publisher_clean.sh'
 alias rb='/c/work/scripts/invoke_repo_build.sh'
 alias spo='/c/work/scripts/save_last_publisher_output.sh'
+
+# FHIR IG publisher aliases - specific IGs
+alias pshs='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig-sharedhealthsummary-1.json' # SHS
+alias pphr='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig-personalhealthrecords-1.json' # PHR
+alias pmr='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig-medicare-records.json' # MR
+alias pes='java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig-eventsummary-1.json' # ES
+
+# removes the .fhir package for au-fhir-base; used when Brett updates au-fhir-base
+alias rp='rm -vr /c/Users/rob.eastwood/.fhir/packages/hl7.fhir.au.base#current'
+
+# IG publish ci-fhir-stu3 IGs with first removing au-fhir-base package
+alias pshsc='rm -vr /c/Users/rob.eastwood/.fhir/packages/hl7.fhir.au.base#current && java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig-sharedhealthsummary-1.json' # SHS
+alias pphrc='rm -vr /c/Users/rob.eastwood/.fhir/packages/hl7.fhir.au.base#current && java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig-personalhealthrecords-1.json' # PHR
+alias pesc='rm -vr /c/Users/rob.eastwood/.fhir/packages/hl7.fhir.au.base#current && java -jar "/c/work/git/fhir-ig-publisher/org.hl7.fhir.igpublisher.jar" -ig ig-eventsummary-1.json' # ES
